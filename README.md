@@ -1,11 +1,42 @@
 # Imago Go Image Recognition
 
-[![Build Status](https://travis-ci.org/tomasmcz/imago.svg?branch=master)](https://travis-ci.org/tomasmcz/imago)
-[![Documentation Status](https://readthedocs.org/projects/imago/badge/?version=latest)](http://imago.readthedocs.io/en/latest/?badge=latest)
+멀티미디어 시스템 2019년도 1학기 바둑 이미지 detection을 위한 레파지토립니다. 원본 오픈소스는 [tomasmcz/imago](https://github.com/tomasmcz/imago)이며, 해당 라이센스를 따릅니다.
 
-http://tomasm.cz/imago
 
-There is also an experimantal [Haskell version of Imago](https://github.com/tomasmcz/imago-hs).
+
+## Quick Usage
+
+```shell
+$ docker run -it nlkey2022/imago:0.1 /home/go_detection/image.jpg
+```
+
+![](image.jpg)
+
+```python
+. . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . .
+. . . W . . . . . . . . . . W . . . .
+. . . . . . . . . . . . . . . . B . .
+. . . . . . . . . . . . . . . B . . .
+. . W . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . W . .
+. . B . B . . . . . . . . W . . . . .
+. . . . . . . . . . . . . . . B . . .
+. . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . .
+```
+
+
+
+
 
 ## Requirements
 
@@ -18,37 +49,10 @@ There is also an experimantal [Haskell version of Imago](https://github.com/toma
     - sphinx
     - sphinx-argparse
 
-## Installation
 
-Run `make` in this directory.
 
-## Usage
+## LICENSE
 
-Run `./imago image.jpg` to extract game position from image.jpg.
-Run `./imago -m image.jpg` to manually select grid position.
-Run `./imago image000.jpg image001.jpg image002.jpg ...` to produce a game record from a sequence of images, one for every move. Use `-S` option to select SGF output. 
-Run `./imago --help` for help and list of all options.
+Copyright (c) 2014, Tomáš Musil
 
-## Tests
-
-The imago test suite lives in the
-[imago-tests](https://github.com/tomasmcz/imago-tests) repository, which is a 
-[submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules) of this repository.
-Run `git submodule init; git submodule update` (or clone this repository with
-`git clone --recursive`) to get the test data. 
-
-To run the tests, build imago and run `./runtests` from the root of the
-working directory.
-
-The runtests program runs imago on each input image and compares the
-output to the expected.  Any discrepancy is a test failure.
-
-Failing tests can be disabled by moving them into a directory named
-"skip".  "skip" directories are by default ignored by the runtests
-program.  Run `./runtests --all` to include tests marked "skip".
-
-## Contributors
-
-- Tomáš Musil (@tomasmcz)
-- Sebastian Kuzminsky (@SebKuzminsky)
-- Nicolas Rochette
+All rights reserved.
