@@ -4,7 +4,7 @@
 
 
 
-## Quick Usage
+## Quick Usage using Docker
 
 ```shell
 $ docker run -it nlkey2022/imago:0.1 /home/go_detection/image.jpg
@@ -35,6 +35,19 @@ $ docker run -it nlkey2022/imago:0.1 /home/go_detection/image.jpg
 ```
 
 
+
+## How to Configure not use Docker
+
+```shell
+$ apt-get update
+$ apt-get install -y python git make gcc build-essential python-dev python-pip
+$ git clone https://github.com/AlphaKHU/go_detection && cd go_detection && make
+$ pip install -r requirements.txt
+```
+
+```shell
+$ python imago image.jpg
+```
 
 
 
