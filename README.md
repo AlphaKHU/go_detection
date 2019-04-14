@@ -4,7 +4,7 @@
 
 
 
-## Quick Usage using Docker
+## 도커로 빠르게 시작하기
 
 ```shell
 $ docker run -it nlkey2022/imago:0.1 /home/go_detection/image.jpg
@@ -36,7 +36,7 @@ $ docker run -it nlkey2022/imago:0.1 /home/go_detection/image.jpg
 
 
 
-## How to Configure not use Docker
+## 도커를 사용하지 않고 환경 구성
 
 ```shell
 $ apt-get update
@@ -45,8 +45,40 @@ $ git clone https://github.com/AlphaKHU/go_detection && cd go_detection && make
 $ pip install -r requirements.txt
 ```
 
+- Inputs
+
 ```shell
 $ python imago image.jpg
+```
+여러 이미지를 사용할 때는 다음과 같이 사용합니다.
+```shell
+$ python imago image1.jpg image2.jpg image3.jpg ....
+```
+
+
+- Output
+
+
+```python
+. . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . .
+. . . W . . . . . . . . . . W . . . .
+. . . . . . . . . . . . . . . . B . .
+. . . . . . . . . . . . . . . B . . .
+. . W . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . W . .
+. . B . B . . . . . . . . W . . . . .
+. . . . . . . . . . . . . . . B . . .
+. . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . .
 ```
 
 
